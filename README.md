@@ -6,7 +6,7 @@ I am particularly interested in compositing hurricane gifs into videos to watch 
 
 I depend on these scripts to download, organize, and transform sattelite data from NOAA into longform videos
 
-## Florence Strikes the Carolinas - Sep 18
+## Florence Strikes the Carolinas - Sep 2018
 [![Florence_video](https://img.youtube.com/vi/QtRf1vUTr38/0.jpg)](http://www.youtube.com/watch?v=QtRf1vUTr38)
 
 ## How to run these in the Raspberry Pi Crontab
