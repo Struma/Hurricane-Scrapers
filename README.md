@@ -17,7 +17,7 @@ Type:
 
 ```crontab -e ```
 
-Then append the following line to the file **format accordingly**
+Then append the following line to the file. **Don't forget to format accordingly**
 
 ```bash
 00 00 */1 * * cd /location/dir/of/script/ && python3 python_script.py
