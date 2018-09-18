@@ -22,5 +22,7 @@ Then append the following line to the file. **Don't forget to format accordingly
 ```bash
 00 00 */1 * * cd /location/dir/of/scripts_dir/ && python3 python_script.py
 ```
+The cd command precedes the python script because the crontab doesn't operate exactly the same as in a virtual terminal. If you **don't need to call file operations** like saving or creating directories, you'll be fine. Otherwise, using explicit links in your code should also work. 
 
+Most of my code is written with symbolic links referenced to a arbirtary top level directory. I use the cd program to navigate to the top level directory in the cron, and then I call the python script which then executes from the proper location.
 
