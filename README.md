@@ -13,7 +13,9 @@ I depend on these scripts to download, organize, and transform sattelite data fr
 
 I use my PI Zero server in order to run these jobs daily in the cron.
 
-Type:```crontab -e ```
+Type:
+
+```crontab -e ```
 
 Then append the following line to the file **format accordingly**
 
