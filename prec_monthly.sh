@@ -1,7 +1,5 @@
 #!/bin/bash
 
-> vid_list.txt;
-
 ls *.mp4 | sort | tail > vid_list.txt;
 
 diff old_list.txt vid_list.txt | grep '> ' | sed 's/> //' | sort > dif_list.txt;
@@ -19,3 +17,5 @@ filename=$[$filename-1];
 final_name=${months[$filename]}$flnmYear.mp4;
 
 ffmpeg -f concat -i dif_list.txt -c copy $final_name;
+
+rm vidlist.txt
