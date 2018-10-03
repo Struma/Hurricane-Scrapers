@@ -1,10 +1,12 @@
 #!/bin/bash
 
-ls *.mp4 | sort | tail > vid_list.txt;
+#> vid_list.txt;
 
-diff old_list.txt vid_list.txt | grep '> ' | sed 's/> //' | sort > dif_list.txt;
+ls 20*.mp4 | sort  > vid_list.log;
 
-cat vid_list.txt  > old_list.txt;
+diff old_list.log vid_list.log | grep '> ' | sed 's/> //' | sort | gawk '{ print "file","\047"$1"\047"}' > dif_list.log;
+
+cat vid_list.log  > old_list.log;
 
 filename=$(date +"%m");
 flnmYear=$(date +"%y");
@@ -16,6 +18,6 @@ filename=$[$filename-1];
 
 final_name=${months[$filename]}$flnmYear.mp4;
 
-ffmpeg -f concat -i dif_list.txt -c copy $final_name;
+ffmpeg -f concat -i dif_list.log -c copy $final_name;
 
-rm vid_list.txt
+rm vid_list.log;
