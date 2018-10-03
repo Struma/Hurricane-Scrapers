@@ -18,4 +18,4 @@ final_name=${months[$filename]}$flnmYear.mp4;
 
 ffmpeg -f concat -i dif_list.txt -c copy $final_name;
 
-rm vidlist.txt
+rm vid_list.txt
